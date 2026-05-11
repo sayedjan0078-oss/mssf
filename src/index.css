@@ -1,0 +1,110 @@
+/* ۱. معرفی فونت به پروژه */
+@font-face {
+  font-family: 'Dana';
+  /* چون در پوشه پابلیک است، فقط با یک اسلش آدرس می‌دهیم */
+  src: url('/dana regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ۲. اعمال فونت روی کل بدنه سایت */
+body {
+  font-family: 'Dana', Tahoma, Arial, sans-serif !important;
+}
+
+/* ۳. اطمینان از اینکه دکمه‌ها، اینپوت‌ها و سایر تگ‌ها هم فونت را می‌گیرند */
+*, *::before, *::after {
+  font-family: inherit;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: sans-serif;
+  background: #f5f7fb;
+}
+
+/* NAVBAR */
+.custom-navbar{
+  background: linear-gradient(90deg, #4169E1, #1E3A8A);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
+  background-image: url("/back.jpeg");
+  background-size: cover;
+  /* این تنظیمات پیش‌فرض برای موبایل است */
+  background-position: center; 
+  position: relative;
+}
+
+/* تنظیمات مخصوص کامپیوتر و لپ‌تاپ (صفحه‌های بزرگتر از ۷۶۸ پیکسل) */
+@media (min-width: 768px) {
+  .hero-section {
+    /* با این دستور، عکس در کامپیوتر کمی پایین می‌آید */
+    background-position: center 20%; 
+  }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/* BUTTON */
+.custom-btn{
+  background: #4169E1;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.custom-btn:hover{
+  background: #1E3A8A;
+  transform: translateY(-3px);
+}
+
+/* CARDS */
+.custom-card{
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.custom-card:hover{
+  transform: translateY(-10px);
+}
+
+.icon{
+  font-size: 45px;
+}
+
+/* FOOTER */
+.footer{
+  background: #0f172a;
+}
+html{
+  scroll-behavior: smooth;
+}
